@@ -50,7 +50,7 @@ class AudioSpectrogramConverter:
         y, sr = librosa.load(input_path, sr=self.config.sample_rate)
 
         # Generate mel spectrogram
-        mel_spec = librosa.feature.melspectrogram9(
+        mel_spec = librosa.feature.melspectrogram(
             y=y,
             sr=sr,
             n_fft=self.config.n_fft,
