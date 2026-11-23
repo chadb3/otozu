@@ -146,5 +146,5 @@ class AudioSpectrogramConverter:
             hop_length=self.config.hop_length,
             n_fft=self.config.n_fft,
         )
-        sr.write(output_path, audio, sr)
+        sf.write(output_path, audio, sr)
         return output_path
